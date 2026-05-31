@@ -68,7 +68,7 @@ SELECT THE PERSON NAME:
 
 <script>
 
-// 🔐 Passwords
+
 const passwords = {
     a: "praveen5555",
     b: "1111",
@@ -77,19 +77,17 @@ const passwords = {
     e: "4444"
 };
 
-// 🔑 First check password
 function showPhotos(name) {
     let enteredPass = prompt("Enter password:");
 
     if (enteredPass === passwords[name]) {
-        displayPhotos(name);  //  correct function call
+        displayPhotos(name);
     } else {
         alert(" Wrong Password!");
         document.getElementById("gallery").innerHTML = "";
     }
 }
 
-// 📸 Show images
 function displayPhotos(name) {
     let gallery = document.getElementById("gallery");
 
