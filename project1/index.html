@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>PRAVEENS FAMILY DOCUMENTS</title>
+
+<style>
+body {
+    text-align: center;
+    font-family: Arial;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin: 5px;
+    background: lightgray;
+    cursor: pointer;
+}
+
+li:hover {
+    background: gray;
+    color: white;
+}
+
+img {
+    margin: 10px;
+    width: 200px;
+}
+.btn {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: darkblue;
+}
+</style>
+</head>
+
+<body>
+
+<p style="font-size: 30px; font-family: Arial; font-weight: bold;">
+WELCOME TO PRAVEENS FAMILY DOCUMENT WEBSITE
+</p>
+
+<p style="font-size: 20px; font-family: Arial; font-weight: bold;">
+HERE YOU CAN HAVE THE DOCUMENTS OF A PERSON YOU WANT
+</p>
+
+<p style="font-size: 20px; font-family: Arial; font-weight: bold;">
+SELECT THE PERSON NAME:
+</p>
+
+<ul>
+    <li onclick="showPhotos('a')">AKKALA PRAVEEN KUMAR</li>
+    <li onclick="showPhotos('b')">AKKALA VIJAYA</li>
+    <li onclick="showPhotos('c')">AKKALA SATHISH</li>
+    <li onclick="showPhotos('d')">GOPATHI SHEKAR</li>
+    <li onclick="showPhotos('e')">GOPATHI SWATHI</li>
+</ul>
+
+<div id="gallery"></div>
+
+<script>
+
+
+const passwords = {
+    a: "praveen5555",
+    b: "1111",
+    c: "2222",
+    d: "3333",
+    e: "4444"
+};
+
+
+function showPhotos(name) {
+    let enteredPass = prompt("Enter password:");
+
+    if (enteredPass === passwords[name]) {
+        displayPhotos(name);  //  correct function call
+    } else {
+        alert(" Wrong Password!");
+        document.getElementById("gallery").innerHTML = "";
+    }
+}
+
+
+function displayPhotos(name) {
+    let gallery = document.getElementById("gallery");
+
+    if (name === 'a') {
+        gallery.innerHTML = `
+        <img src="IMG_20260318_101815_1.jpg">
+        <br><br>
+        <a href="IMG_20260318_101815_1.jpg" download class="btn">Download File</a>
+
+        <br><br>
+        <img src="IMG_20260318_101919_1.jpg">
+        <br><br>
+        <a href="IMG_20260318_101919_1.jpg" download class="btn">Download File</a>
+
+        <br><br>
+        <img src="IMG_20260318_101948_1.jpg">
+        <br><br>
+        <a href="IMG_20260318_101948_1.jpg" download class="btn">Download File</a>
+
+        <br><br>
+        <img src="IMG_20260318_102023_1.jpg">
+        <br><br>
+        <a href="IMG_20260318_102023_1.jpg" download class="btn">Download File</a>
+
+        <br><br>
+        <img src="IMG_20260318_102121_1.jpg">
+        <br><br>
+        <a href="IMG_20260318_102121_1.jpg" download class="btn">Download File</a>  
+
+        <br><br> 
+        <img src="Screenshot_20260318_104021.jpg">
+        <br><br>
+        <a href="Screenshot_20260318_104021.jpg" download class="btn">Download File</a>
+        `;
+    }
+    if (name === 'b') {
+        gallery.innerHTML = `
+        <img src="IMG_20260318_183337.jpg">
+        <br><br>
+        <a href="IMG_20260318_183337.jpg" download class="btn">Download File</a>
+
+        <br><br>
+        <img src="IMG_20260318_183303.jpg">
+        <br><br>
+        <a href="IMG_20260318_183303.jpg" download class="btn">Download File</a>
+
+        <br><br>
+        <img src="IMG_20260318_182944.jpg">
+        <br><br>
+        <a href="IMG_20260318_182944.jpg" download class="btn">Download File</a>
+
+        <br><br>
+        <img src="IMG_20260318_102121_1.jpg">
+        <br><br>
+        <a href="IMG_20260318_102121_1.jpg" download class="btn">Download File</a>
+
+        <br><br>
+        <img src="IMG_20260318_183108.jpg">
+        <br><br>
+        <a href="IMG_20260318_183108.jpg" download class="btn">Download File</a>  
+          `;
+          }
+}
+</script>
+</body>
+</html>
